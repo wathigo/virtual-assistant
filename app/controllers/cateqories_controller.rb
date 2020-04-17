@@ -1,2 +1,0 @@
-class CateqoriesController < ApplicationController
-end
