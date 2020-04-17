@@ -1,4 +1,4 @@
 class Service < ApplicationRecord
-    belongs_to :category
-    validates :name, presence: true
+  belongs_to :category
+  validates :name, presence: true
 end
