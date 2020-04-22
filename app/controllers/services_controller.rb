@@ -18,11 +18,6 @@ class ServicesController < ApplicationController
 
   def destroy
     @service = Service.find_by_id(params[:id])
-    redirect_back(fallback_location: root_path) if @service.delete
-  end
-
-  def destroy
-    @service = Service.find_by_id(params[:id])
     if @service
       redirect_back(fallback_location: root_path) if @service.destroy
     else
