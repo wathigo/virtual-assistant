@@ -6,9 +6,7 @@ RSpec.describe ServicesController, type: :controller do
   describe '#create' do
     it 'Increases created Services by one if the record is valid' do
       service_params = FactoryBot.attributes_for(:service, category_id: tech.id)
-      # rubocop:disable Layout/LineLength
       expect { post :create, params: { service: service_params } }.to change(Service.all, :count).by(1)
-      # rubocop:enable Layout/LineLength
     end
 
     it 'Does not create a service record if the the record is invalid' do

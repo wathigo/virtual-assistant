@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe ServiceMappersController, type: :controller do
@@ -8,7 +7,6 @@ RSpec.describe ServiceMappersController, type: :controller do
 
   let (:mapper) { FactoryBot.create(:service_mapper, employee_id: employee.id, client_id: client.id, service_id: service.id) }
 
-  # rubocop:enable Lint/ParenthesesAsGroupedExpression
   describe '#create' do
     it 'Increases created service_mapper by one if the record is valid' do
       service_mapper_params = {
@@ -25,8 +23,7 @@ RSpec.describe ServiceMappersController, type: :controller do
         employee_id: employee.id,
         client_id: client.id
       }
-      expect { post :create, params: { service_mapper: service_mapper_params } }.to change(ServiceMapper.all, :count).by(0)]
-      # rubocop:enable Layout/LineLength
+      expect { post :create, params: { service_mapper: service_mapper_params } }.to change(ServiceMapper.all, :count).by(0)
     end
   end
 
