@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_04_22_132503) do
   create_table "service_mappers", force: :cascade do |t|
     t.bigint "service_id"
     t.integer "client_id", null: false
-    t.integer "employee_id", null: false
+    t.integer "employee_id", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["service_id"], name: "index_service_mappers_on_service_id"
