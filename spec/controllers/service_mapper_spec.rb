@@ -1,3 +1,4 @@
+# rubocop:disable Lint/ParenthesesAsGroupedExpression
 require 'rails_helper'
 
 RSpec.describe ServiceMappersController, type: :controller do
@@ -6,6 +7,8 @@ RSpec.describe ServiceMappersController, type: :controller do
   let (:service) { FactoryBot.create(:service) }
 
   let (:mapper) { FactoryBot.create(:service_mapper, employee_id: employee.id, client_id: client.id, service_id: service.id) }
+
+  # rubocop:enable Lint/ParenthesesAsGroupedExpression
   describe '#create' do
     it 'Increases created service_mapper by one if the record is valid' do
       service_mapper_params = {

@@ -1,7 +1,7 @@
 class ServiceMappersController < ApplicationController
   def new
     @service_mapper = ServiceMapper.new(service_mapper_params)
-    end
+  end
 
   def create
     @service_mapper = ServiceMapper.new(service_mapper_params)
