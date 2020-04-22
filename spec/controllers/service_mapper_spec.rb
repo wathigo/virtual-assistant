@@ -1,4 +1,5 @@
 # rubocop:disable Lint/ParenthesesAsGroupedExpression
+# rubocop:disable Layout/LineLength
 require 'rails_helper'
 
 RSpec.describe ServiceMappersController, type: :controller do
@@ -25,7 +26,8 @@ RSpec.describe ServiceMappersController, type: :controller do
         employee_id: employee.id,
         client_id: client.id
       }
-      expect { post :create, params: { service_mapper: service_mapper_params } }.to change(ServiceMapper.all, :count).by(0)
+      expect { post :create, params: { service_mapper: service_mapper_params } }.to change(ServiceMapper.all, :count).by(0)]
+      # rubocop:enable Layout/LineLength
     end
   end
 
