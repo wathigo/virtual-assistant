@@ -10,7 +10,7 @@ RSpec.describe ServicesController, type: :controller do
     end
 
     it 'Does not create a service record if the the record is invalid' do
-      service_params = { name: '', category_id: tech.id}
+      service_params = { name: '', category_id: tech.id }
       expect { post :create, params: { service: service_params } }.to change(Service.all, :count).by(0)
     end
   end
