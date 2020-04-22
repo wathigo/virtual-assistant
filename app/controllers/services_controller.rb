@@ -26,7 +26,7 @@ class ServicesController < ApplicationController
     if @service
       redirect_back(fallback_location: root_path) if @service.destroy
     else
-      flash[:alert] = "Ooops, Record was not found"
+      flash[:alert] = 'Ooops, Record was not found'
     end
   end
 

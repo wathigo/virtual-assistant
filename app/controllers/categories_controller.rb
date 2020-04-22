@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
     if @category
       redirect_back(fallback_location: root_path) if @category.destroy
     else
-      flash[:alert] = "Ooops, Record was not found"
+      flash[:alert] = 'Ooops, Record was not found'
     end
   end
 
