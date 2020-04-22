@@ -1,26 +1,37 @@
 class ServicesController < ApplicationController
-  def new; end
+  def new
+    @service = Service.new(service_params)
+  end
 
   def create
-    @service = service.new(service_params)
+    @service = Service.new(service_params)
     if @service.save
       redirect_back(fallback_location: root_path)
     else
-      flash[:alert] = 'Somethig went wrong'
+      render :new
     end
   end
 
   def index
-    @services = service.all
+    @services = Service.all
   end
 
   def destroy
-    @service = service.find_by_id(params[:format])
-    redirect_back(fallback_location: root_path) if @service.destroy
+    @service = Service.find_by_id(params[:id])
+    redirect_back(fallback_location: root_path) if @service.delete
+  end
+
+  def destroy
+    @service = Service.find_by_id(params[:id])
+    if @service
+      redirect_back(fallback_location: root_path) if @service.destroy
+    else
+      flash[:alert] = "Ooops, Record was not found"
+    end
   end
 
   def show
-    @service = @service = service.find_by_id(params[:format])
+    @service = @service = Service.find_by_id(params[:format])
   end
 
   private
