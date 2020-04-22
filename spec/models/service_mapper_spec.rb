@@ -1,5 +1,4 @@
-# rubocop:disable Lint/ParenthesesAsGroupedExpression
-
+# rubocop:disable
 require 'rails_helper'
 
 RSpec.describe ServiceMapper, type: :model do
@@ -9,7 +8,6 @@ RSpec.describe ServiceMapper, type: :model do
 
   let (:mapper) { FactoryBot.create(:service_mapper, employee_id: employee.id, client_id: client.id, service_id: service.id) }
 
-  # rubocop:enable Lint/ParenthesesAsGroupedExpression
   describe 'General Service_mapper attributes validation' do
     it 'Record should be valid if all the validations passes' do
       expect(mapper.valid?).to eql(true)

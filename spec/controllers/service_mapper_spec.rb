@@ -1,3 +1,5 @@
+# rubocop:disable
+
 require 'rails_helper'
 
 RSpec.describe ServiceMappersController, type: :controller do
