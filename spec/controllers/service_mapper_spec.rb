@@ -1,5 +1,4 @@
-# rubocop:disable Lint/ParenthesesAsGroupedExpression
-# rubocop:disable Layout/LineLength
+
 require 'rails_helper'
 
 RSpec.describe ServiceMappersController, type: :controller do
