@@ -10,9 +10,7 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def index
-    @categories = Category.all
-  end
+  def index; end
 
   def destroy
     @category = Category.find_by_id(params[:id])
