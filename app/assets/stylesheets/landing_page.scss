@@ -1,0 +1,28 @@
+.landing-page {
+    background: radial-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.4)
+    ),image-url('back.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    height: 90vh;
+
+    h1 {
+        margin: 0;
+        padding: 2em 0 0 0;
+        text-align: center;
+        font-family: 'Teko', sans-serif;
+        font-weight: lighter;
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+    }
+     button {
+         width: 10%;
+         margin-left: 45%;
+     }
+}

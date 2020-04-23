@@ -21,6 +21,10 @@
      padding: 0;
  }
 
+ body {
+     position: relative;
+ }
+
  .notice, .alert {
     position: absolute;
 }
