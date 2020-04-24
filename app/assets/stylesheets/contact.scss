@@ -1,0 +1,27 @@
+[contact] {
+    background-color: #D3D3D3;
+    margin-top: -2em;
+
+    figure {
+        width: 50%;
+        padding-top: 25vh;
+        margin: 0 auto;
+    }
+
+    button {
+        background-color: #000080;
+        color: #ffffff;
+        border: none;
+        padding: 0.5em;
+        cursor: pointer;
+        width: 15%;
+        margin-left: 42.5%;
+        font-size: 1.2em;
+
+
+        &:hover {
+            background-color: #ffffff;
+            color: #000000;        
+        }
+    }
+}
