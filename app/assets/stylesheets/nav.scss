@@ -1,0 +1,45 @@
+nav {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    height: 15vh;
+    position: relative;
+    font-family: 'Teko', sans-serif;
+    span {
+        height: 15vh;
+        line-height: 15vh;
+        display: inline-block;
+        margin-left: 0.5em;
+        font-size: 1.8em;
+    }
+    ul {
+        display: inline;
+        padding: 0;
+        margin-top: 0;
+        position: absolute;
+        right: 2em;
+        li {
+            list-style: none;
+            display: inline; 
+            height: 15vh;
+            line-height: 15vh;
+            font-size: 1.1em;
+            font-family: 'Mada', sans-serif;
+
+            i {
+                color: #ffffff;
+            }
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                margin-left: 1.2em;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+}

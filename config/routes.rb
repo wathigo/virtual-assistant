@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :categories, only: %i[create destroy show index]
   resources :services, only: %i[create destroy show index]
   resources :service_mappers, only: %i[create destroy show index]
-  root 'categories#new'
+  resources :home, only: %i[index]
+  root 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

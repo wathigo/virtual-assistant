@@ -1,0 +1,9 @@
+<div class="categories-container">
+  <% @categories = categories %>
+  <% if @categories.any? %>
+      <% @categories.each do |category| %>
+        <%= render category %>
+      <% end %>
+  <% end %>
+
+</div>
