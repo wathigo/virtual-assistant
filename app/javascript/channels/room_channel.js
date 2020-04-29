@@ -13,6 +13,10 @@ consumer.subscriptions.create("RoomChannel", {
   received(data) {
     // Called when there's incoming data on the websocket for this channel
     console.log(data, 'received!!')
+    $('#messages').append('<div class="message"> ' + data.message.message + '</div>')
+    document.querySelector('#value').value = ''
+    document.querySelector('.chat-cont').scrollTop = document.querySelector('.chat-cont').scrollHeight;
+
   },
 
   speak: function(message) {
