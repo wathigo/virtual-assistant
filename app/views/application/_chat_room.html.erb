@@ -7,8 +7,9 @@
         <% end %>
     </div>
 
-    <form>
-    <label>Say something:</label><br>
-    <input type="text" data-behavior="room_speaker">
-    </form>
+    <%= form_for @room_message, remote: true do |f| %>
+        <%= f.text_field :message %>
+        <%= f.hidden_field :room_id %>
+        <%= f.submit  %>
+      <% end %>
 </div>
