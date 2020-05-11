@@ -4,7 +4,7 @@
         <% if messages? room %>
             <div class='room'>
                 <p> <%= room.name %> </p>
-                <%= link_to "View Room", room_path(room) %>
+                <%= link_to "View Room", room_path(room), remote: true %>
                 <span> <%= message_count room %> </span>
             </div>
         <% end %>

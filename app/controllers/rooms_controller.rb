@@ -5,6 +5,6 @@ class RoomsController < ApplicationController
 
     def show
         @room = Room.find_by_id(params[:id])
-        @room_messanges = @room.room_messanges.all
+        @room_messages = @room.room_messages.all
     end
 end
