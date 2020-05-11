@@ -31,12 +31,14 @@
         width: 60%;
         padding: 1.5em;
         margin-bottom: 2em;
+        border-radius: 0.8em;
         
         &::after {
             content: '';
             position: absolute;
             width: 0.8em;
             height: 0.8em;
+            left: 2em;
             bottom: -0.4em;
             background-color: #000080;
             transform: rotateY(0deg) rotate(45deg);

@@ -5,11 +5,11 @@ class RoomMessagesController < ApplicationController
 
   def create
     @room_message = RoomMessage.new(msg_params)
-    if @room_message.save
-      flash[:alert] = "Message sent"
-    else
-      flash[:alert] = "Message not sent"
-    end
+    flash[:alert] = if @room_message.save
+                      'Message sent'
+                    else
+                      'Message not sent'
+                    end
     end
 
   private

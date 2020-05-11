@@ -1,5 +1,6 @@
 class HomeController < ApplicationController 
   before_action :create_room, only: [:index]
+
   def index
     @categories = Category.all
   end

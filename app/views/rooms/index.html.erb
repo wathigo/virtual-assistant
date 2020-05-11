@@ -1,0 +1,12 @@
+<div class='rooms-cont'>
+<h1>Available Rooms</h1>
+    <% @rooms.each do |room| %>
+        <% if messages? room %>
+            <div class='room'>
+                <p> <%= room.name %> </p>
+                <%= link_to "View Room", room_path(room) %>
+                <span> <%= message_count room %> </span>
+            </div>
+        <% end %>
+    <% end %>
+</div>
