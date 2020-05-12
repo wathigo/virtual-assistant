@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :room_messages
-  resources :rooms, only: %i[index show]
+  resources :rooms, only: %i[index show create]
   devise_for :users
   resources :categories, only: %i[create destroy show index]
   resources :services, only: %i[create destroy show index]

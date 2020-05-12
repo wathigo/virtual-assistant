@@ -3,6 +3,7 @@ class CreateRoomMessages < ActiveRecord::Migration[6.0]
     create_table :room_messages do |t|
       t.references :room, null: false, foreign_key: true
       t.text :message
+      t.boolean :admin, default: false
 
       t.timestamps
     end

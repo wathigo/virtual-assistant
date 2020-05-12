@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_04_25_074847) do
   create_table "room_messages", force: :cascade do |t|
     t.bigint "room_id", null: false
     t.text "message"
+    t.boolean "admin", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["room_id"], name: "index_room_messages_on_room_id"

@@ -1,0 +1,5 @@
+<%= form_for @room_message, :url => rooms_path(@room_message) remote: true do |f| %>
+    <%= f.text_field :message, :id => 'value' %>
+    <%= f.hidden_field :room_id %>
+    <%= f.submit  %>
+  <% end %>
