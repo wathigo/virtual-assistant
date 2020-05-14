@@ -1,0 +1,21 @@
+allChatsContainer = document.createElement('div');
+allChats = document.createElement('div');
+allChats.classList.add('all-chats');
+allChatsContainer.classList.add('all-chats-container');
+document.querySelector('.rooms-cont').appendChild(allChatsContainer);
+<% @room_messages.each do |room_message| %>
+    message = document.createElement('p');
+    message.classList.add('admin-msg');
+    message.textContent = `<%= room_message.message %>`;
+    allChats.appendChild(message);
+<% end %>
+
+allChatsContainer.appendChild(allChats);
+form = "<div class='enquiry-form'>" +
+         "#{j render partial: 'form'}}" +
+       "</div>"
+allChats.lastChild.insertAdjacentHTML('afterend', form);
+console.log(document.querySelector('html').scrollTop);
+nav = document.querySelector('nav');
+console.log(document.querySelector('html').scrollTop, nav.clientHeight);
+allChatsContainer.style.top = `${document.querySelector('html').scrollTop - nav.clientHeight}px`;

@@ -1,0 +1,15 @@
+<div class="chat-cont">
+    <h4>Talk to us. We respond instantly</h4>
+
+    <div id="messages">=
+        <% @room_messages.each do |room_message| %>
+            <%= render room_message %>
+        <% end %>
+    </div>
+
+    <%= form_for @room_message, remote: true do |f| %>
+        <%= f.text_field :message, :id => 'value' %>
+        <%= f.hidden_field :room_id %>
+        <%= f.submit  %>
+      <% end %>
+</div>

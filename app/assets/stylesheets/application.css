@@ -16,6 +16,12 @@
 
  @import '@fortawesome/fontawesome-free';
 
+ html {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+ }
+
  body, html {
      margin: 0;
      padding: 0;
@@ -23,6 +29,8 @@
 
  body {
      position: relative;
+     transition: all 2s ease 0s;
+     overflow: hidden;
  }
 
  .notice, .alert {

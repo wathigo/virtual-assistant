@@ -1,0 +1,88 @@
+// Place all the styles related to the Rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.rooms-cont {
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: relative;
+    min-height: 80vh;
+    h1 {
+        text-align: center;
+        margin-top: 0;
+    }
+    .room {
+        width: 50%;
+        background-color: #000080;
+        margin: 2em auto 2em auto;
+        color: #ffffff;
+        font-weight: bold;
+        position: relative;
+        p {
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+        }
+
+        a{
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        span {
+            display: inline-block;
+            position: absolute;
+            right: 1.2em;
+            bottom: 0.4em;
+            width: 2.5em;
+            height: 2.5em;
+            line-height: 2.5em;
+            border-radius: 50%;
+            background-color: rgb(192, 49, 49);
+            color: #ffffff;
+            text-align: center;
+            box-sizing: border-box;
+            font-weight: bold;
+            font-family: 'Teko', sans-serif;
+        }
+    }
+    .all-chats-container {
+        position: absolute;
+        top: -100vh;
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,.6) 40%,rgba(0,0,0,.4))no-repeat;
+        width: 100vw;
+        transition: top 1s;
+
+        .all-chats {
+            width: 70%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            height: 70vh;
+            margin-top: 16vh;
+            padding: 3em;
+            box-sizing: border-box;
+
+            .admin-msg {
+                background-color: #000080;
+                color: #ffffff;
+                padding: 0.5em;
+                position: relative;
+                width: 50%;
+                padding: 1.5em;
+                margin-bottom: 2em;
+                border-radius: 0.8em;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0.8em;
+                    height: 0.8em;
+                    left: 2em;
+                    bottom: -0.4em;
+                    background-color: #000080;
+                    transform: rotateY(0deg) rotate(45deg);
+                }
+            }
+        }
+    }
+}
